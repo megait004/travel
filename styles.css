@@ -1,0 +1,179 @@
+/* Basic styles for the page */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background: #f0ad4e;
+    padding: 20px;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header p {
+    margin: 5px 0 0;
+}
+
+.nav {
+    background-color: #333;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav ul li a:hover {
+    background-color: #f0ad4e;
+    color: white;
+    border-radius: 5px;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1.5em;
+    margin: 10px 0 0;
+}
+
+.content {
+    padding: 20px;
+    text-align: left;
+}
+
+.content section {
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.content h2 {
+    color: #333;
+    cursor: pointer;
+    user-select: none;
+    margin-top: 0;
+    transition: color 0.3s;
+}
+
+.content h2:hover {
+    color: #f0ad4e;
+}
+
+.details {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+section:hover .details {
+    display: block;
+    opacity: 1;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+    }
+    
+    .nav ul li {
+        margin: 10px 0;
+    }
+    
+    .hero {
+        height: 40vh;
+    }
+
+    .hero-text h2 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+}
+
+/* Additional styles */
+#highlight img,
+#itinerary img,
+#meals img,
+#accommodation img,
+#services img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    #highlight img,
+    #itinerary img,
+    #meals img,
+    #accommodation img,
+    #services img {
+        margin-top: 0;
+    }
+}
